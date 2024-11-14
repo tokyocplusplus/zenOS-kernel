@@ -65,7 +65,7 @@ int validate_cpu(void)
 	check_cpu(&cpu_level, &req_level, &err_flags);
 
 	if (cpu_level < req_level) {
-		printf("This kernel requires an %s CPU, ",
+		printf("hey dumbass this kernel requires an %s CPU, ",
 		       cpu_name(req_level));
 		printf("but only detected an %s CPU.\n",
 		       cpu_name(cpu_level));
@@ -74,7 +74,7 @@ int validate_cpu(void)
 
 	if (err_flags) {
 		puts("This kernel requires the following features "
-		     "not present on the CPU:\n");
+		     "which are not present on the CPU:\n");
 		show_cap_strs(err_flags);
 		putchar('\n');
 		return -1;
