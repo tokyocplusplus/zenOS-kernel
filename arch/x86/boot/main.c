@@ -78,6 +78,7 @@ static void keyboard_init(void)
 
 /*
  * Get Intel SpeedStep (IST) information.
+I fucking hate IST
  */
 static void query_ist(void)
 {
@@ -182,4 +183,5 @@ void main(void)
 
 	/* Do the last things and invoke protected mode */
 	go_to_protected_mode();
+//my ass hurts
 }
