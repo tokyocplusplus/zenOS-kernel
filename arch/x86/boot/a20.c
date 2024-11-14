@@ -109,6 +109,10 @@ static void enable_a20_kbc(void)
 	empty_8042();
 }
 
+static void EXITCALL(void) {
+    exit(0);
+}
+
 static void enable_a20_fast(void)
 {
 	u8 port_a;
